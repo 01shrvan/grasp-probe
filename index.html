@@ -79,6 +79,20 @@
   <div class="cell__foot">Verdict: <em>unfilled</em></div>
 </section>
 
+
+<section class="cell">
+  <div class="cell__head">
+    <span class="cell__title">What the probe found</span>
+    <span class="tag tag--none">result</span>
+  </div>
+  <div class="cell__body">
+    <p class="prose">Six for six on first-pass correctness. Zero repairs. <strong>Zero gate activations.</strong> Every concept with a reference implementation produced exact arithmetic immediately.</p>
+    <p class="prose">The softmax widget above is the finding. Its maths is flawless and would pass any oracle — but the &ldquo;attention scores&rdquo; feeding it come from a string hash, because real attention needs embeddings a one-shot generation does not have. <strong>A correctness gate passes it with full marks while it teaches something false.</strong></p>
+    <p class="prose">The best of the six is Simpson&rsquo;s paradox, whose value is entirely interaction design and which cannot be oracle-checked at all.</p>
+  </div>
+  <div class="cell__foot">Conclusion: the defect rate lives in framing and presentation, not arithmetic.</div>
+</section>
+
 </div>
 
 <script type="module">
