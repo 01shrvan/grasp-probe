@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grasp Probe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">Grasp — step zero</p>
+  <h1>Six concepts, one generation pass each, nothing else.</h1>
+  <p class="prose">Grasp proposes generating interactive explainers and then mechanically verifying them. Every gate in that plan assumes the generated widget is <strong>good</strong>. Nobody checked. These six were produced in one pass with a plain prompt — no repair loop, no gates, no retries — because hand-tuned widgets prove nothing about a pipeline that cannot hand-tune.</p>
+  <p class="prose">The question is not whether they run. They run. It is: <strong>would you rather read these than a good blog post?</strong></p>
+  <dl class="method">
+    <div><dt>Passes per concept</dt><dd>1</dd></div>
+    <div><dt>Repairs allowed</dt><dd>0</dd></div>
+    <div><dt>Gates applied</dt><dd>none</dd></div>
+    <div><dt>Predicted result</dt><dd>correct but mediocre</dd></div>
+  </dl>
+</header>
+
+<section class="cell">
+  <div class="cell__head">
+    <span class="cell__title">Softmax &amp; attention weights</span>
+    <span class="tag tag--oracle">oracle exists</span>
+  </div>
+  <div class="cell__body" id="w-softmax"></div>
+  <div class="cell__foot">Verdict: <em>unfilled</em></div>
+</section>
+
+<section class="cell">
+  <div class="cell__head">
+    <span class="cell__title">Insertion sort</span>
+    <span class="tag tag--oracle">oracle exists</span>
+  </div>
+  <div class="cell__body" id="w-sort"></div>
+  <div class="cell__foot">Verdict: <em>unfilled</em></div>
+</section>
+
+<section class="cell">
+  <div class="cell__head">
+    <span class="cell__title">Gradient descent</span>
+    <span class="tag tag--oracle">oracle partial</span>
+  </div>
+  <div class="cell__body" id="w-gradient"></div>
+  <div class="cell__foot">Verdict: <em>unfilled</em></div>
+</section>
+
+<section class="cell">
+  <div class="cell__head">
+    <span class="cell__title">Fourier composition</span>
+    <span class="tag tag--oracle">oracle exists</span>
+  </div>
+  <div class="cell__body" id="w-fourier"></div>
+  <div class="cell__foot">Verdict: <em>unfilled</em></div>
+</section>
+
+<section class="cell">
+  <div class="cell__head">
+    <span class="cell__title">Recursion</span>
+    <span class="tag tag--none">no oracle</span>
+  </div>
+  <div class="cell__body" id="w-recursion"></div>
+  <div class="cell__foot">Verdict: <em>unfilled</em></div>
+</section>
+
+<section class="cell">
+  <div class="cell__head">
+    <span class="cell__title">Simpson&rsquo;s paradox</span>
+    <span class="tag tag--none">no oracle</span>
+  </div>
+  <div class="cell__body" id="w-simpsons"></div>
+  <div class="cell__foot">Verdict: <em>unfilled</em></div>
+</section>
+
+</div>
+
+<script type="module">
+import softmax from "./widgets/softmax.js";
+import sort from "./widgets/sort.js";
+import gradient from "./widgets/gradient-descent.js";
+import fourier from "./widgets/fourier.js";
+import recursion from "./widgets/recursion.js";
+import simpsons from "./widgets/simpsons.js";
+
+softmax(document.getElementById("w-softmax"));
+sort(document.getElementById("w-sort"));
+gradient(document.getElementById("w-gradient"));
+fourier(document.getElementById("w-fourier"));
+recursion(document.getElementById("w-recursion"));
+simpsons(document.getElementById("w-simpsons"));
+</script>
+</body>
+</html>
