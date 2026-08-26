@@ -26,7 +26,7 @@ const modules = widgets
 const calls = widgets
   .map((name) => {
     const fn = `mount_${name.replace(/-/g, "_")}`;
-    const id = name === "gradient-descent" ? "gradient" : name;
+    const id = name;
     return `mount_${name.replace(/-/g, "_")}(document.getElementById("w-${id}"));`;
   })
   .join("\n");
